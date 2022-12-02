@@ -1,0 +1,25 @@
+{% extends "bnh/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1> Formulario de Heroes </h1>
+{% endblock %}
+
+{% block otroblock %}
+<h1> Formulario </h1>
+
+<form action="{% url 'cursoheroes' %}" method="POST"> {% csrf_token %}
+
+    <table>
+
+        {{ form.as_table }}
+
+    </table>
+
+    <input type="submit" value="Enviar Heroe">
+
+</form>
+
+
+{% endblock %}

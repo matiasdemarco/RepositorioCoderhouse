@@ -1,0 +1,23 @@
+{% extends "bnh/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Busqueda de Heroe</h1>
+{% endblock %}
+
+{% block otroblock %}
+{% if heroes %}
+<ul>
+    {% for elemento in heroes %}
+        <li> {{ heroes.nombre }}</li>
+        <li> {{ heroes.apellido }}</li>
+    {% endfor %}
+</ul>
+
+{% else %}
+<p> No hay Heroe con ese nombre </p>
+
+{% endif %}
+
+{% endblock %}
